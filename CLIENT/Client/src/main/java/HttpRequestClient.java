@@ -1,3 +1,6 @@
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -47,6 +50,9 @@ public class HttpRequestClient {
             *   {    "userId": 1,    "id": 2,    "title": "sunt qui ex....
             * */
 
+
+            System.out.println(parse(responseContent.toString()));
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (ProtocolException e) {
@@ -59,6 +65,22 @@ public class HttpRequestClient {
 
 
     }
+
+    // Make Json Array
+    public static String parse(String responseBody){
+        JSONArray albums = new JSONArray(responseBody);
+
+        for(int i = 0 ; i < albums.length() ; i++){
+            JSONObject album = albums.getJSONObject(i);
+            int id = album.getInt("id");
+            int userId = album.getInt("userId");
+            String title = album.getString("title");
+            System.out.println(id + "  "  + userId + " " + title);
+        }
+
+        return null;
+    }
+
 
 
 }
