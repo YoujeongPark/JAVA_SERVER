@@ -30,6 +30,11 @@
       <artifactId>jetty-http</artifactId>
       <version>9.4.28.v20200408</version>
     </dependency>
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20140107</version>
+    </dependency>
   </dependencies>
 
   <build>
