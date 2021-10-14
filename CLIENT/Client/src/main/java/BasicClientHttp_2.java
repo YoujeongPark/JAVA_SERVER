@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
-public class BasicClientHttp {
+public class BasicClientHttp_2 {
     private static HttpURLConnection connection;
 
     public static void main(String[] agrs) throws IOException {

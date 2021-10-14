@@ -3,7 +3,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class BasicServer {
+public class BasicServerSocket_1 {
     public static void main( String[] args ) throws IOException {
         ServerSocket listener = new ServerSocket(8080);
         Socket socket = listener.accept();

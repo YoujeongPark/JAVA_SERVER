@@ -11,7 +11,7 @@ import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class BasicSeverHttp {
+public class BasicServerHttp_2 {
 
     private final String DEFAULT_HOSTNAME = "0.0.0.0";
     private final int DEFAULT_PORT = 8080;
@@ -23,13 +23,13 @@ public class BasicSeverHttp {
     /**
      * 생성자
      */
-    public BasicSeverHttp() throws IOException {
+    public BasicServerHttp_2() throws IOException {
         createServer(DEFAULT_HOSTNAME, DEFAULT_PORT);
     }
-    public BasicSeverHttp(int port) throws IOException {
+    public BasicServerHttp_2(int port) throws IOException {
         createServer(DEFAULT_HOSTNAME, port);
     }
-    public BasicSeverHttp(String host, int port) throws IOException {
+    public BasicServerHttp_2(String host, int port) throws IOException {
         createServer(host, port);
     }
 
@@ -59,7 +59,7 @@ public class BasicSeverHttp {
 
     public static void main(String[] args) {
 
-        BasicSeverHttp httpServerManager = null;
+        BasicServerHttp_2 httpServerManager = null;
 
         try {
             // 시작 로그
@@ -71,7 +71,7 @@ public class BasicSeverHttp {
             );
 
             // 서버 생성
-            httpServerManager = new BasicSeverHttp("localhost", 8080);
+            httpServerManager = new BasicServerHttp_2("localhost", 8080);
             httpServerManager.start();
             // Shutdown Hook
             Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
